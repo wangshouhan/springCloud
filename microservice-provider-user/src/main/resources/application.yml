@@ -2,16 +2,16 @@ server:
   port: 8001
 spring:
   application:
-    name: microservice-provider-user    # 项目名称尽量用小写
+    name: microservice-provider-user
   jpa:
     generate-ddl: false
     show-sql: true
     hibernate:
       ddl-auto: none
-  datasource:                           # 指定数据源
-    platform: h2                        # 指定数据源类型
-    schema: classpath:schema.sql        # 指定h2数据库的建表脚本
-    data: classpath:data.sql            # 指定h2数据库的insert脚本
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
 logging:
   level:
     root: INFO
@@ -22,6 +22,6 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/    # 指定注册中心的地址
+      defaultZone: http://discovery:8761/eureka/
   instance:
     preferIpAddress: true
