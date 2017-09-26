@@ -9,10 +9,3 @@ eureka:
       defaultZone: http://discovery:8761/eureka/
   instance:
     hostname: ribbon
-hystrix:
-  command:
-     default:
-        execution:
-          isolation:
-            thread:
-              timeoutInMilliseconds: 100000
